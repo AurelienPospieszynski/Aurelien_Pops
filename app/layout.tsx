@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={cn(
           GeistSans.variable,
-          anek_Telugu,
+          anek_Telugu.variable,
           'font-sans h-full bg-background text-foreground'
         )}
       >
