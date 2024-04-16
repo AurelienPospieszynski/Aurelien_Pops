@@ -1,16 +1,44 @@
+import { ComponentPropsWithoutRef } from 'react';
 import { Section } from './Section';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
+
+const Code = ({ className, ...props }: ComponentPropsWithoutRef<'span'>) => {
+  return (
+    <span
+      className={cn(
+        'bg-accent/30 hover:bg-accent/50 border border-accent transitions-color p-1 rounded-md',
+        className
+      )}
+      {...props}
+    />
+  );
+};
 
 export const Hero = () => {
   return (
     <Section className="flex max-md:flex-col items-start">
       <div className="flex-[2]">
-        <h2 className="font-caption font-bold text-5xl">
+        <h2 className="font-caption font-bold text-5xl text-secondary">
           Aurélien <br /> Pospieszynski
         </h2>
-        <h3>Software Engineer</h3>
+        <h3 className="font-caption text-3xl text-secondary">
+          Software Engineer
+        </h3>
         <p>
-          I'm a software engineer based in Paris, France. I love building things
-          for the web and learning new technologies.
+          Curious and dynamic Fullstack Developer, I'm currently working for
+          <Link href="https://www.extia.fr/">
+            <Code className="m-1">
+              <img
+                src="/img/Logo_Extia.png"
+                className="inline w-8 h-auto mb-1 mr-1"
+              ></img>
+              Extia.
+            </Code>
+          </Link>
+          <br /> Discover my projects and experiences, which combine <br />
+          <Code className="mr-1">💫 creativity</Code> and{' '}
+          <Code className="m-1"> 💻 technical expertise </Code>
         </p>
       </div>
       <div className="flex-1">
