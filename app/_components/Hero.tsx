@@ -43,7 +43,7 @@ export const Hero = () => {
       </div>
       <div className="flex-1 m-auto ml-auto max-md:m-auto">
         <img
-          src="/img/me.png"
+          src="https://avatars.githubusercontent.com/u/36408090?v=4"
           alt="Illustration of
             Aurélien Pospieszynski"
           className="w-48 h-48 rounded-full max-w-xs max-md:w-48"
