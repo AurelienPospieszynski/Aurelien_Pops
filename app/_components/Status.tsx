@@ -9,6 +9,7 @@ import {
   CircleUser,
 } from 'lucide-react';
 import Link from 'next/link';
+import { Badge } from '@/components/ui/badge';
 
 export const Status = () => {
   return (
@@ -128,7 +129,7 @@ const WORK_EXPERIENCES: WorkExperienceProps[] = [
   {
     image:
       'https://media.licdn.com/dms/image/C560BAQHl1RvG-jIR2Q/company-logo_100_100/0/1630657481716/ag2r_la_mondiale_logo?e=1721260800&v=beta&t=lJrOWmukcIj47xC0gFxObaurS1i4HjUyxVy5gvcgCl8',
-    company: 'Soprasteria - AG2R La Mondiale',
+    company: 'Soprasteria - AG2R',
     position: 'Software Engineer',
     date: 'April 2019 - Feb 2022',
     fullstack: true,
@@ -152,7 +153,12 @@ const WorkExperience = (props: WorkExperienceProps) => {
         className="w-6 h-6 object-contain rounded-full"
       />
       <div>
-        <p className="text-base font-caption font-semibold">{props.company}</p>
+        <div className="flex flex-row items-center gap-2">
+          <p className="text-base font-caption font-semibold">
+            {props.company}
+          </p>
+          {props.fullstack && <Badge variant="outline"> Fullstack </Badge>}
+        </div>
         <p className="text-xs text-muted-foreground ">{props.position}</p>
       </div>
       <div className="ml-auto">
