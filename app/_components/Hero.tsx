@@ -1,19 +1,6 @@
-import { ComponentPropsWithoutRef } from 'react';
 import { Section } from './Section';
-import { cn } from '@/lib/utils';
 import Link from 'next/link';
-
-const Code = ({ className, ...props }: ComponentPropsWithoutRef<'span'>) => {
-  return (
-    <span
-      className={cn(
-        'bg-accent/30 hover:bg-accent/50 border border-accent transitions-color p-1 rounded-md',
-        className
-      )}
-      {...props}
-    />
-  );
-};
+import { Code } from './Code';
 
 export const Hero = () => {
   return (
