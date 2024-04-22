@@ -8,7 +8,7 @@ export const ContactCard = (props: {
   description: string;
 }) => {
   return (
-    <Card className="p-3 bg-accent/10 hover:bg-accent/30 transition-colors group flex items-center gap-4">
+    <Card className="p-3 bg-accent/10 hover:bg-accent/30 transition-colors group flex items-center gap-4 ">
       <div className="relative ">
         <img
           src={props.image}

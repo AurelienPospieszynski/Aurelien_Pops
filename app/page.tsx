@@ -1,9 +1,10 @@
-import Image from 'next/image';
 import { Header } from './_components/Header';
 import { Hero } from './_components/Hero';
 import { Spacing } from './_components/Spacing';
 import { Status } from './_components/Status';
 import { Skill } from './_components/Skill';
+import { Contact } from './_components/Contact';
+import { Footer } from './_components/Footer';
 
 export default function Home() {
   return (
@@ -25,6 +26,16 @@ export default function Home() {
 
       {/*Skill section is here. It contains skills */}
       <Skill />
+
+      <Spacing size="md" />
+
+      {/* Contact section is here. */}
+      <Contact />
+
+      <Spacing size="md" />
+
+      {/* Footer is here. */}
+      <Footer />
     </main>
   );
 }

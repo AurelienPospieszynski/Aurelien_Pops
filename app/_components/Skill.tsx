@@ -64,8 +64,8 @@ export const Skill = () => {
           <TailwindcssIcon size={42} />
           <h3 className="text-2xl font-caption font-semibold">TailwindCSS</h3>
           <p className="text-sm text-muted-foreground leading-7">
-            I'm using <Code>TailwindCSS</Code> for everything. I love the way it
-            works and their perspective of
+            I'm using <Code>TailwindCSS</Code> to makes everything prettier. I
+            love the way it works and their perspective of evolution.
           </p>
         </div>
         <div className="flex flex-col gap-2 flex-1">
