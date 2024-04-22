@@ -8,7 +8,7 @@ import { TwitterIcon } from './icons/TwitterIcon';
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 py-4">
+    <header className="top-0 py-4">
       <Section className="flex items-baseline">
         <h1 className="text-base font-semibold text-primary italic">
           "You don't grow when you're comfortable"

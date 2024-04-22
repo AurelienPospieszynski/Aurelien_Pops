@@ -4,6 +4,9 @@ import { AngularIcon } from './icons/AngularIcon';
 import { Code } from './Code';
 import { JavaIcon } from './icons/JavaIcon';
 import { ReactIcon } from './icons/ReactIcon';
+import { TailwindcssIcon } from './icons/TailwindcssIcon';
+import { SqlIcon } from './icons/SqlIcon';
+import { OpenAiIcon } from './icons/OpenAiIcon';
 
 export const Skill = () => {
   return (
@@ -40,6 +43,37 @@ export const Skill = () => {
           <p className="text-sm text-muted-foreground leading-7">
             I'm also working on <Code>React</Code>. I use <Code>NextJS</Code>
             mainly for my personal projects.
+          </p>
+        </div>
+      </div>
+      <div className="flex max-md:flex-col gap-4">
+        <div className="flex flex-col gap-2 flex-1">
+          <OpenAiIcon
+            size={42}
+            className="animate-spin"
+            style={{ animationDuration: '10s' }}
+          />
+          <h3 className="text-2xl font-caption font-semibold">IA</h3>
+          <p className="text-sm text-muted-foreground leading-7">
+            I love working with IA. Notably <Code>ChatGPT</Code> and{' '}
+            <Code>Copilot</Code>. I start to integrate <Code>OpenAI</Code> in my
+            projects.
+          </p>
+        </div>
+        <div className="flex flex-col gap-2 flex-1">
+          <TailwindcssIcon size={42} />
+          <h3 className="text-2xl font-caption font-semibold">TailwindCSS</h3>
+          <p className="text-sm text-muted-foreground leading-7">
+            I'm using <Code>TailwindCSS</Code> for everything. I love the way it
+            works and their perspective of
+          </p>
+        </div>
+        <div className="flex flex-col gap-2 flex-1">
+          <SqlIcon size={42} />
+          <h3 className="text-2xl font-caption font-semibold">SQL</h3>
+          <p className="text-sm text-muted-foreground leading-7">
+            I love the database aspect. I work a lot on the realization and
+            optimization. I'm more a <Code>Relationnal Database</Code> person.
           </p>
         </div>
       </div>
