@@ -1,16 +1,12 @@
 import { Card } from '@/components/ui/card';
 import { Section } from './Section';
-import {
-  Headphones,
-  LucideIcon,
-  Music,
-  Briefcase,
-  FolderKanban,
-  CircleUser,
-  ArrowUpRight,
-} from 'lucide-react';
+import { Briefcase, FolderKanban, CircleUser } from 'lucide-react';
 import Link from 'next/link';
-import { Badge } from '@/components/ui/badge';
+import { ContactCard } from './ContactCard';
+import { WorkExperience } from './WorkExperience';
+import { WORK_EXPERIENCES } from '../assets/db/WORK_EXPERIENCES';
+import { SideProject } from './SideProject';
+import { SIDE_PROJECTS } from '../assets/db/SIDE_PROJECTS';
 
 export const Status = () => {
   return (
@@ -72,150 +68,5 @@ export const Status = () => {
         </Card>
       </div>
     </Section>
-  );
-};
-
-/*
- * SIDE PROJECTS PART
- */
-const SIDE_PROJECTS: SideProjectProps[] = [
-  {
-    Logo: Music,
-    title: 'KEPOFY',
-    description: 'Personal webapp to listen music from Deezer. ',
-    url: 'https://github.com/AurelienPospieszynski/kepofy',
-  },
-  {
-    Logo: Headphones,
-    title: 'KEPOFY',
-    description: 'Personal webapp to listen music from Deezer. ',
-    url: 'https://github.com/AurelienPospieszynski/kepofy',
-  },
-];
-
-type SideProjectProps = {
-  Logo: LucideIcon;
-  title: string;
-  description: string;
-  url: string;
-};
-
-const SideProject = (props: {
-  Logo: LucideIcon;
-  title: string;
-  description: string;
-  url: string;
-}) => {
-  return (
-    <Link
-      href={props.url}
-      className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded "
-    >
-      <span className="bg-accent text-accent-foreground p-3 rounded-sm">
-        <props.Logo size={24} />
-      </span>
-      <div>
-        <div>
-          <p className="text-lg font-semibold">{props.title}</p>
-          <p className="text-sm text-muted-foreground">{props.description}</p>
-        </div>
-      </div>
-    </Link>
-  );
-};
-
-/*
- * WORK PART
- */
-
-const WORK_EXPERIENCES: WorkExperienceProps[] = [
-  {
-    image:
-      'https://media.licdn.com/dms/image/D4E0BAQHgmINOkOiFTg/company-logo_200_200/0/1710260478834/sncf_logo?e=1721260800&v=beta&t=6oUrje0Uar_cNdVE-Eg0rgPv6nVlBX3nB4t8d9hG9_s',
-    company: 'Extia - SNCF',
-    position: 'Software Engineer',
-    date: 'Mar 2023 - Present',
-    fullstack: true,
-  },
-  {
-    image: 'https://static.licdn.com/aero-v1/sc/h/p4pvtlgggtwlz9lht17nvnqq',
-    company: 'Personnal Experience',
-    position: 'USA Trip',
-    date: 'Feb 2022 - Sep 2022',
-    fullstack: false,
-  },
-  {
-    image:
-      'https://media.licdn.com/dms/image/C560BAQHl1RvG-jIR2Q/company-logo_100_100/0/1630657481716/ag2r_la_mondiale_logo?e=1721260800&v=beta&t=lJrOWmukcIj47xC0gFxObaurS1i4HjUyxVy5gvcgCl8',
-    company: 'Soprasteria - AG2R',
-    position: 'Software Engineer',
-    date: 'April 2019 - Feb 2022',
-    fullstack: true,
-  },
-];
-
-type WorkExperienceProps = {
-  image: string;
-  company: string;
-  position: string;
-  date: string;
-  fullstack?: boolean;
-};
-
-const WorkExperience = (props: WorkExperienceProps) => {
-  return (
-    <div className="flex gap-4">
-      <img
-        src={props.image}
-        alt={props.company}
-        className="w-6 h-6 object-contain rounded-full"
-      />
-      <div>
-        <div className="flex flex-row items-center gap-2">
-          <p className="text-base font-caption font-semibold">
-            {props.company}
-          </p>
-          {props.fullstack && <Badge variant="outline"> Fullstack </Badge>}
-        </div>
-        <p className="text-xs text-muted-foreground ">{props.position}</p>
-      </div>
-      <div className="ml-auto">
-        <p className="text-xs text-muted-foreground text-end">{props.date}</p>
-      </div>
-    </div>
-  );
-};
-
-const ContactCard = (props: {
-  image: string;
-  mediumImage: string;
-  name: string;
-  description: string;
-}) => {
-  return (
-    <Card className="p-3 bg-accent/10 hover:bg-accent/30 transition-colors group flex items-center gap-4">
-      <div className="relative ">
-        <img
-          src={props.image}
-          alt={props.name}
-          className="w-10 h-10 rounded-full object-contain"
-        />
-        <img
-          src={props.mediumImage}
-          alt={props.name}
-          className="w-4 h-4 absolute -bottom-1 -right-1 rounded-full object-contain"
-        />
-      </div>
-      <div className="mr-auto">
-        <div className="flex items-center gap-2">
-          <p className="text-base font-caption font-semibold">{props.name}</p>
-        </div>
-        <p className="text-xs text-muted-foreground ">{props.description}</p>
-      </div>
-      <ArrowUpRight
-        className="mr-4 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform"
-        size={16}
-      />
-    </Card>
   );
 };
