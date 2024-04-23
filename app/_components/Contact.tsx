@@ -1,7 +1,5 @@
 import { Badge } from '@/components/ui/badge';
 import { Section } from './Section';
-import { Card } from '@/components/ui/card';
-import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { ContactCard } from './ContactCard';
 

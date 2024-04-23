@@ -13,7 +13,7 @@ export const Hero = () => {
           Software Engineer
         </h3>
         <p>
-          Curious and dynamic Fullstack Developer, I'm currently working for
+          Curious and dynamic I'm a Fullstack Developer currently working at
           <Link href="https://www.extia.fr/">
             <Code className="m-1">
               <img
