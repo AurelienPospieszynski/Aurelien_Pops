@@ -14,7 +14,7 @@ export const WORK_EXPERIENCES: WorkExperienceProps[] = [
   },
   {
     image: 'https://static.licdn.com/aero-v1/sc/h/p4pvtlgggtwlz9lht17nvnqq',
-    company: 'Personnal Experience',
+    company: 'Personal Experience',
     position: 'USA Trip',
     date: 'Feb 2022 - Sep 2022',
     fullstack: false,
