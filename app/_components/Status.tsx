@@ -7,6 +7,7 @@ import { WorkExperience } from './WorkExperience';
 import { WORK_EXPERIENCES } from '../assets/db/WORK_EXPERIENCES';
 import { SideProject } from './SideProject';
 import { SIDE_PROJECTS } from '../assets/db/SIDE_PROJECTS';
+import { BorderBeam } from '@/components/ui/border-beam';
 
 export const Status = () => {
   return (
@@ -43,9 +44,10 @@ export const Status = () => {
             ))}
           </div>
         </Card>
-        <Card className="p-4 flex-1 flex flex-col gap-2">
+        <Card className="relative p-4 flex-1 flex flex-col gap-2">
           <p className="text-lg font-semibold flex">
             {' '}
+            <BorderBeam />
             <CircleUser className="mr-2" /> Contact me
           </p>
           <Link href="https://www.linkedin.com/in/aur%C3%A9lien-pospieszynski-08744b170/">
